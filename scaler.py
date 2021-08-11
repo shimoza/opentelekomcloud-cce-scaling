@@ -43,7 +43,7 @@ payload = json.dumps({
     },
     "nodeNicSpec": {
       "primaryNic": {
-        "subnetId": "a5dd5a3d-1f17-4362-b25a-9be2d81bae1c"
+        "subnetId": "NETWORKID"
       }
     }
   }
@@ -53,7 +53,7 @@ headers = {
   'X-Auth-Token': 'XXXXXx',
   'Authorization': 'Bearer XXXXX'
 }
-conn.request("POST", "/api/v3/projects/a5dd5a3d-1f17-4362-b25a-9be2d81bae1c/clusters/8d4e599a-ca8f-11eb-93ba-0255ac1016af/nodes", payload, headers)
+conn.request("POST", "/api/v3/projects/PROJECTID/clusters/CLUSTERID/nodes", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
